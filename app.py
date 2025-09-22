@@ -29,8 +29,8 @@ app.secret_key = "fghhdfgdfgrthrttgdfsadfsaffgd"
 
 db = mysql.connector.connect(
     host=os.environ.get("DB_HOST", "sql.freedb.tech"),
-    user=os.environ.get("DB_USER", "your-freedb-username"),      # replace with your FreeDB username
-    password=os.environ.get("DB_PASSWORD", "your-freedb-password"),  # replace with your FreeDB password
+    user=os.environ.get("DB_USER", "sushravya1723@gmail.com"),      # your FreeDB login email
+    password=os.environ.get("DB_PASSWORD", "Sushravya17#"),  # your FreeDB login password
     database=os.environ.get("DB_NAME", "freedb_Stress1"),
     port=int(os.environ.get("DB_PORT", 3306))
 )
