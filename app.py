@@ -25,13 +25,17 @@ app.secret_key = "fghhdfgdfgrthrttgdfsadfsaffgd"
 # Database connection
 # ---------------------------
 # NOTE: For deployment, consider cloud MySQL or SQLite
+
+
 db = mysql.connector.connect(
-    host='localhost',      # Replace with cloud host if using remote DB
-    user="root",
-    password="",
-    port='3306',
-    database='Stress1'
+    host=os.environ.get("DB_HOST", "sql.freedb.tech"),
+    user=os.environ.get("DB_USER", "your-freedb-username"),      # replace with your FreeDB username
+    password=os.environ.get("DB_PASSWORD", "your-freedb-password"),  # replace with your FreeDB password
+    database=os.environ.get("DB_NAME", "freedb_Stress1"),
+    port=int(os.environ.get("DB_PORT", 3306))
 )
+
+
 cur = db.cursor()
 
 # ---------------------------
