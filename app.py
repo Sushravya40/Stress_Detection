@@ -25,7 +25,6 @@ app.secret_key = "fghhdfgdfgrthrttgdfsadfsaffgd"
 # Database connection
 # ---------------------------
 # NOTE: For deployment, consider cloud MySQL or SQLite
-<<<<<<< HEAD
 db = mysql.connector.connect(
     host='localhost',      # Replace with cloud host if using remote DB
     user="root",
@@ -34,8 +33,6 @@ db = mysql.connector.connect(
     database='Stress1'
 )
 cur = db.cursor()
-=======
-
 
 import os
 import psycopg2
@@ -44,7 +41,6 @@ db_url = os.environ["DATABASE_URL"]
 
 conn = psycopg2.connect(db_url)
 cursor = conn.cursor()
->>>>>>> 6d2e7b2c10fd825a55ea74aebedd662cce47cdf5
 
 # ---------------------------
 # Paths for CSV and model
