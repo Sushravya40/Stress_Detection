@@ -27,16 +27,13 @@ app.secret_key = "fghhdfgdfgrthrttgdfsadfsaffgd"
 # NOTE: For deployment, consider cloud MySQL or SQLite
 
 
-db = mysql.connector.connect(
-    host=os.environ.get("DB_HOST", "sql.freedb.tech"),
-    user=os.environ.get("DB_USER", "sushravya1723@gmail.com"),      # your FreeDB login email
-    password=os.environ.get("DB_PASSWORD", "Sushravya17#"),  # your FreeDB login password
-    database=os.environ.get("DB_NAME", "freedb_Stress1"),
-    port=int(os.environ.get("DB_PORT", 3306))
-)
+import os
+import psycopg2
 
+db_url = os.environ["DATABASE_URL"]
 
-cur = db.cursor()
+conn = psycopg2.connect(db_url)
+cursor = conn.cursor()
 
 # ---------------------------
 # Paths for CSV and model
