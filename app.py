@@ -25,14 +25,14 @@ app.secret_key = "fghhdfgdfgrthrttgdfsadfsaffgd"
 # Database connection
 # ---------------------------
 # NOTE: For deployment, consider cloud MySQL or SQLite
-db = mysql.connector.connect(
-    host='localhost',      # Replace with cloud host if using remote DB
-    user="root",
-    password="",
-    port='3306',
-    database='Stress1'
-)
-cur = db.cursor()
+#db = mysql.connector.connect(
+   # host='localhost',      # Replace with cloud host if using remote DB
+    #user="root",
+    #password="",
+    #port='3306',
+    #database='Stress1'
+#)
+#cur = db.cursor()
 
 import os
 import psycopg2
